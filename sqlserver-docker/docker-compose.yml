@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  sqlserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sqlserver_container
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Songlong123
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./init-database.sql:/init-database.sql
+    command: >
+      bash -c "
+        /opt/mssql/bin/sqlservr & 
+        sleep 45 && 
+        sqlcmd -S localhost -U sa -P Songlong123 -i /init-database.sql -b &&
+        tail -f /dev/null
+      "
+
