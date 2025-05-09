@@ -220,7 +220,7 @@ public class ThanhToanJDialog extends javax.swing.JDialog {
     void inHoaDon() {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            try (Connection con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=NhaHangChay_CohesiveStars;encrypt = false", "sa", "songlong")) {
+            try (Connection con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=NhaHangChay_CohesiveStars;encrypt = false", "sa", "Songlong123")) {
                 String reportPath = "src\\View\\HoaDonIn.jrxml";
 
                 String mahd = txtMaHoaDon.getText().substring(2);

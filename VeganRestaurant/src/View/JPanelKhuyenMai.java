@@ -37,7 +37,7 @@ public class JPanelKhuyenMai extends javax.swing.JPanel {
     int current = 0; //dòng vị trí hiện hành    
 
     String username = "sa";
-    String password = "songlong";
+    String password = "Songlong123";
     String dburl = "jdbc:sqlserver://localhost:1433;databaseName=NhaHangChay_CohesiveStars";
 
     /**
