@@ -215,7 +215,8 @@ insert into NhanVien (TenNhanVien, ChucVu, TrangThai, GioiTinh, SDT, Email, Hinh
 	(N'Vũ Đăng Quang', 0, N'Nghỉ', 0, '0303030303', 'quangvdps36680@fpt.edu.vn', 'AQuangB.png'),
 	(N'Vũ Hoàng Chương', 0, N'Hoạt động', 0, '0404040404', 'chuongvhps36806@fpt.edu.vn', 'AChuong.jpg'),
 	(N'Bùi Minh Quang', 0, N'Hoạt động', 0, '0505050505', 'quangbmps28437@fpt.edu.vn', 'AQuangN.png'),
-	(N'Phạm Ngọc Rôn', 0, N'Hoạt động', 0, '0606060606', 'ronpnps36596@fpt.edu.vn', 'Td.jpg');
+	(N'Phạm Ngọc Rôn', 0, N'Hoạt động', 0, '0606060606', 'ronpnps36596@fpt.edu.vn', 'Td.jpg'),
+	(N'Nguyễn Danh Thái', 0, N'Hoạt động', 0, '0606060606', 'nguyendanhthai@gmail.com', 'Td.jpg');
 go
 
 insert into TaiKhoan (TenTaiKhoan, MatKhau, VaiTro, MaNhanVien) values
@@ -224,7 +225,8 @@ insert into TaiKhoan (TenTaiKhoan, MatKhau, VaiTro, MaNhanVien) values
 	('QuangVD', '123', 0, 3),
 	('ChuongVH', '123', 0, 4),
 	('QuangBM', '123', 0, 5),
-	('RonPN', '123', 0, 6);
+	('RonPN', '123', 0, 6),
+	('ThaiND', '123', 0, 6);
 go
 
 insert into KhachHang (TenKhachHang, SDT, NgaySinh) values
