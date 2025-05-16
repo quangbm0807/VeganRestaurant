@@ -14,17 +14,18 @@ services:
       - "1433:1433"
     volumes:
       - ./init-database.sql:/init-database.sql
-      - init_status:/var
+      - init_status:/var/opt/mssql/init-flag
     command: >
       bash -c "
         /opt/mssql/bin/sqlservr & 
         sleep 45 && 
-        if [ ! -f /var/initialized.flag ]; then
+        if [ ! -f /var/opt/mssql/init-flag/initialized.flag ]; then
           sqlcmd -S localhost -U sa -P Songlong123 -i /init-database.sql -b &&
-          touch /var/initialized.flag;
+          touch /var/opt/mssql/init-flag/initialized.flag;
         fi &&
         tail -f /dev/null
       "
+
 
 volumes:
   init_status:
