@@ -18,14 +18,13 @@ services:
     command: >
       bash -c "
         /opt/mssql/bin/sqlservr & 
-        sleep 45 && 
+        sleep 10 && 
         if [ ! -f /var/opt/mssql/init-flag/initialized.flag ]; then
           sqlcmd -S localhost -U sa -P Songlong123 -i /init-database.sql -b &&
           touch /var/opt/mssql/init-flag/initialized.flag;
         fi &&
         tail -f /dev/null
       "
-
 
 volumes:
   init_status:
